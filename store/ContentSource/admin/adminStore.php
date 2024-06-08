@@ -31,16 +31,18 @@ if(!$_SESSION['auth']){
 <body>
 
 <div class="container-fluid">
-
-
+  <!-- -------Head----------- -->
     <div class="row" id="storeHead-admin">
         <div class="col-2 col-sm-2">
-                  <img src="Assets/icon.png" alt="Company Logo" style="width: 52px; height: 52px;" class="companyLogo">
+                  <img src="https://img.freepik.com/premium-vector/vector-icon-cute-white-cat-with-big-eyes-sitting-circle_176841-6550.jpg?w=2000" alt="Company Logo" style="width: 52px; height: 52px;" class="companyLogo">
         </div>
         <div class="col-8 col-sm-8">
-        <h1 class="headerText"><span><b>Admin - Update/Delete Items</b></span></h1>
+        <h1 class="headerText"><span><b>Quản Lý Sản Phẩm</b></span></h1>
         </div>
         <div class="col-2 col-sm-2">
+        
+            <!-- -------GET AVATAr----------- -->
+
             <?php
             include("config.php");
             $q1 = "SELECT avatarSrc FROM users WHERE userID = $userID";
@@ -53,15 +55,16 @@ if(!$_SESSION['auth']){
             mysqli_close($conn);
 
             ?>
+            <!-- Logout -->
                 <img src="<?php echo $avatar1; ?>" alt="Avatar Logo" style="width: 28px; height: 28px;" class="myicon rounded-pill "> <br/><b><?php echo $userName; ?></b><br/><a href='logout.php'> <small><u style="color:yellow">LogOut</u></small></a> 
         </div>
     </div>
 
 
-    
+    <!-- MENU -->
     <div class="row"> 
         <nav class="navbar navbar-expand-sm bg-primary-admin navbar-white">
-            <div class="container-fluid">
+        <div class="container-fluid" style="background-image: url('https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95c3a34f9.png;')">
                 <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#abc" aria-controls="abc" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="abc">
                     <ul class="navbar-nav">
@@ -85,10 +88,11 @@ if(!$_SESSION['auth']){
     </div>
 
 
-
+<!-- display and search -->
     <div class="row" id="stores-admin">
 
             <?php
+            // Neu co y/c -> search
             if($_POST){
             ?>
                 <form action="index.php">
@@ -106,6 +110,7 @@ if(!$_SESSION['auth']){
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
+                    // laplai
                   while($row = $result->fetch_assoc()) {
                     $productID = $row["productID"];
 
@@ -119,7 +124,7 @@ if(!$_SESSION['auth']){
                     echo " <img src=$row[productImgSrc] height='120' width='auto'>";
                     echo "<p class="."category".">" .$row["productCategory"] ."</p>";
                     echo "<p>" .$row["productDiscription"] . "</p>";
-                    echo "<p class="."price".">LKR ".$row["productPrice"]. ".00</p>";
+                    echo "<p class="."price"."> ".$row["productPrice"]. "vnđ</p>";
 
                     echo "<button  onClick= "."updateItem($productID)"." class="."Stbutton"." type="."submit"."><b>Update</b></button>";
                     echo "  ";
@@ -130,7 +135,8 @@ if(!$_SESSION['auth']){
 
                   }//fetch-while
 
-                } else {
+                } else { 
+                    // hien thi all
             
                     echo "<div class=" ."stores" .">";
                     echo "<h3 class="."title".">NO ITEMS ARE MATCHING TO YOUR SEARCHING !</h3>";
@@ -158,7 +164,7 @@ if(!$_SESSION['auth']){
                     echo " <img src=$row[productImgSrc] height='120' width='auto'>";
                     echo "<p style='color:#0577FF'class="."category"."><b>" .$row["productCategory"] ."</b></p>";
                     echo "<p>" .$row["productDiscription"] . "</p>";
-                    echo "<p class="."price"."><b>LKR ".$row["productPrice"]. ".00</b></p>";
+                    echo "<p class="."price"."><b> ".$row["productPrice"]. "vnđ</b></p>";
 
                     echo "<button  onClick= "."updateItem($productID)"." class="."Stbutton"." type="."submit"."><b>Update</b></button>";
                     echo "  ";
@@ -182,14 +188,14 @@ if(!$_SESSION['auth']){
                 ?>
 
 
-
+<!-- Phần JavaScript  -->
                  <script type="text/javascript">
                 
                      function deleteItem(abc){
                         var pID = abc;
                        
                         $.ajax({
-                            url:'ContentSource/admin/deleteItem.php',
+                            url:'ContentSource/admin/deleteItem.php', //file php resolve
                             type: 'POST',
                             data: {pID},
                             success: function(data) {
@@ -206,7 +212,7 @@ if(!$_SESSION['auth']){
 
                      function updateItem(updateID) {
                         var id= updateID;
-                        window.location = 'ContentSource/admin/update.php?updateid='+updateID;
+                        window.location = 'ContentSource/admin/update.php?updateid='+updateID; // chhuyen huong
                      }
                 
             </script>

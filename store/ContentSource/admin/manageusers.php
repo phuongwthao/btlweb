@@ -19,7 +19,7 @@ if(!$_SESSION['auth']){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Competible" content="ie=edge">
-  <title>ONE SHOP</title>
+  <title>MONSTER</title>
   <link rel="shortcut icon" href="../../Assets/icon.png" />
   <link href="../../Styles/style.css" rel="stylesheet">
 
@@ -31,12 +31,13 @@ if(!$_SESSION['auth']){
 <body>
 
 <div class="container-fluid">
+  <!--  HEADER -->
     <div class="row" id="storeHead-admin">
         <div class="col-2 col-sm-2">
-                  <img src="../../Assets/icon.png" alt="Company Logo" style="width: 52px; height: 52px;" class="companyLogo">
+                  <img src="https://img.freepik.com/premium-vector/vector-icon-cute-white-cat-with-big-eyes-sitting-circle_176841-6550.jpg?w=2000" alt="Company Logo" style="width: 52px; height: 52px;" class="companyLogo">
         </div>
         <div class="col-8 col-sm-8">
-                  <h1 class="headerText"><span><b>Admin - Manage Users</b></span></h1>
+                  <h1 class="headerText"><span><b>Quản Lý Người Dùng</b></span></h1>
         </div>
         <div class="col-2 col-sm-2">
             <?php
@@ -54,7 +55,7 @@ if(!$_SESSION['auth']){
                 <img src="<?php echo $avatar1; ?>" alt="Avatar Logo" style="width: 28px; height: 28px;" class="myicon rounded-pill "> <br/><b><?php echo $userName; ?></b><br/><a href='../../logout.php'> <small><u style="color:yellow">LogOut</u></small></a> 
         </div>
     </div>
-    
+    <!-- MENU -->
     <div class="row"> 
         <nav class="navbar navbar-expand-sm bg-primary-admin navbar-white">
             <div class="container-fluid">
@@ -75,6 +76,7 @@ if(!$_SESSION['auth']){
             </div>
         </nav>
     </div>
+<!-- DANH SACH -->
 <div id="tbl">
   <table>
     <?php
@@ -132,7 +134,7 @@ if(!$_SESSION['auth']){
     ?>
     <br>
     <center>
-      <button type="button" data-bs-toggle="modal" data-bs-target="#myModal" id="cBtn"><b>Create New Admin/User</b></button>
+      <button type="button" data-bs-toggle="modal" data-bs-target="#myModal" id="cBtn"><b>Create New Admin</b></button>
   </center>
       <br><br>
 
@@ -205,7 +207,7 @@ if(!$_SESSION['auth']){
       </div>
 
       <!-- Modal body -->
-      <div class="modal-body">
+      <div class="modal-body"> 
        <form action="manageusers.php" method="POST" enctype="multipart/form-data">
         <center>
           <div id="newadminmodal">

@@ -12,15 +12,15 @@ if(!$_SESSION['auth']){
 
     if($role== "admin"){
 
-
+// get id
     $url =  $_SERVER['QUERY_STRING'];
 
     $productID = ltrim(strstr($url, '='), '=');
 
-    //echo "Product ID = ".$productID;
+    
 
     include ("../../config.php");
-
+// get sp
     $sql = "SELECT * FROM products WHERE productID= '$productID' ";
     $result = $conn->query($sql);
 
@@ -42,7 +42,7 @@ if(!$_SESSION['auth']){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Competible" content="ie=edge">
-  <title>ONE SHOP</title>
+  <title>MONSTER</title>
   <link rel="shortcut icon" href="../../Assets/icon.png" />
   <link href="../../Styles/style.css" rel="stylesheet">
 
@@ -56,7 +56,7 @@ if(!$_SESSION['auth']){
 <div class="container-fluid">
     <div class="row" id="storeHead-admin">
         <div class="col-2 col-sm-2">
-                  <img src="../../Assets/icon.png" alt="Company Logo" style="width: 52px; height: 52px;" class="companyLogo">
+                  <img src="https://img.freepik.com/premium-vector/vector-icon-cute-white-cat-with-big-eyes-sitting-circle_176841-6550.jpg?w=2000" alt="Company Logo" style="width: 52px; height: 52px;" class="companyLogo">
         </div>
         <div class="col-8 col-sm-8">
                   <h1 class="headerText"><span><b>Admin - Update Item</b></span></h1>
@@ -78,9 +78,11 @@ if(!$_SESSION['auth']){
         </div>
     </div>
     <center>
+
     <div id="adminupdatediv">
-        <form action="#" method="POST">
+        <form>
             <br>
+          <input value = "<?php echo $_GET['updateid']; ?>" type="hidden" id="productId" class="addproform">
           <label for="productname"><b>Product Name:</b></label><br>
           <input type="text" id="productname" class="addproform" name="productname" value="<?php echo $productName; ?>" required><br><br>
 
@@ -98,6 +100,7 @@ if(!$_SESSION['auth']){
 
 
           <br>
+          <!-- Nút update -->
           <input type="submit" value="Submit" id="adminupdateitem">
         </form> 
         <br>
@@ -111,30 +114,68 @@ if(!$_SESSION['auth']){
     
   
 </div>
-
+<script>
+    $(document).ready(function () {
+        // Khi click vào nút update
+            $('#adminupdateitem').on('click', function (e) {
+                e.preventDefault();
+                // Dữ liệu từ các input
+                var productId = $('#productId').val();
+                var productname = $('#productname').val();
+                var productCategory = $('#productCategory').val();
+                var productDiscription = $('#productDiscription').val();
+                var productPrice = $('#productPrice').val();
+                var productImgURL = $('#productImgURL').val();
+                // Gửi yêu cầu AJAX tới server
+                $.ajax({
+                    // file xử lý
+                    url: 'process_update.php',
+                    // Phương thức
+                    type: 'POST',
+                    // Data truyền đi
+                    data: {
+                        productId: productId,
+                        productname: productname,
+                        productCategory: productCategory,
+                        productDiscription: productDiscription,
+                        productPrice: productPrice,
+                        productImgURL: productImgURL
+                    },
+                    success: function (response) {
+                        // Xử lý thành công (Hiển thị thông báo )
+                        alert('Update successfully');
+                    },
+                    error: function (xhr, status, error) {
+                        // Xử lý lỗi nếu xảy ra
+                        console.error('Đã xảy ra lỗi:', error);
+                    }
+                });
+            });
+    });
+</script>
 <?php
 
-if($_POST){ 
+// if($_POST){ 
 
-    include("../../config.php");
+//     include("../../config.php");
 
-    $proName= $_POST['productname'];
-    $proCat= $_POST['productCategory'];
-    $proDis= $_POST['productDiscription'];
-    $proPrice= $_POST['productPrice'];
-    $proImg= $_POST['productImgURL'];
+//     $proName= $_POST['productname'];
+//     $proCat= $_POST['productCategory'];
+//     $proDis= $_POST['productDiscription'];
+//     $proPrice= $_POST['productPrice'];
+//     $proImg= $_POST['productImgURL'];
 
-    $sql = "UPDATE `products` SET productName='$proName' , productCategory='$proCat', productDiscription='$proDis', productPrice='$proPrice', productImgSrc='$proImg' WHERE productID = '$productID' ";
+//     $sql = "UPDATE `products` SET productName='$proName' , productCategory='$proCat', productDiscription='$proDis', productPrice='$proPrice', productImgSrc='$proImg' WHERE productID = '$productID' ";
 
-    if ($conn->query($sql) === TRUE) {
-      echo "<script> alert ( 'New record updated successfully'); </script> ";
-    } else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+//     if ($conn->query($sql) === TRUE) {
+//       echo "<script> alert ( 'New record updated successfully'); </script> ";
+//     } else {
+//       echo "Error: " . $sql . "<br>" . $conn->error;
+//     }
 
-    mysqli_close($conn);
+//     mysqli_close($conn);
 
-}
+// }
 
 
 }

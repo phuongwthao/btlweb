@@ -1,53 +1,49 @@
 #storeHead {
   padding: 16px;
-  background: linear-gradient(to bottom, #153cfb, #153cfb);
+  background: linear-gradient(to bottom, green, green);
   color: white;
   text-align: center;
 }
 
 #storeHead-admin {
   padding: 4px;
-  background: linear-gradient(to bottom, #153CFB, #153CFB);
+  background: linear-gradient(to bottom, green, green);
   color: #ffffff;
   text-align: center;
 }
-.headerText span{
+.headerText span {
   text-shadow: 2px 2px 2px black;
 }
 
 .btn-primary {
-  background: linear-gradient(to left, #153cfb, #153cfb);
+  background: linear-gradient(to left, green, green);
   border: 1px solid #ffffff;
-  border-radius: opx;
+  border-radius: 20px !important;
 }
-#searchbtn{
+#searchbtn {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
 }
-#adminsearchbtn{
+#adminsearchbtn {
   border-radius: 0px;
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
 }
-#userSearch{
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  -o-border-radius: 0px;
+#userSearch {
+  border-radius: 20px;
 }
 
 .bg-primary-admin {
-  background: linear-gradient(to top, #0577FF, #0577FF);
+  background: linear-gradient(to top, #b3d797, #b3d797);
 }
 
 .bg-primary {
-  background: linear-gradient(to top, #0577FF, #0577FF);
+  background: linear-gradient(to top, #b3d797, #b3d797);
 }
 
 .nav-item > a:hover {
@@ -62,7 +58,6 @@
   padding: 5px;
   color: #ffffff;
 }
-
 
 #stores {
   background: white;
@@ -96,8 +91,8 @@
 }
 
 .Stbutton {
-  background: #153cfb;
-  border: 2px solid #153cfb;
+  background: green;
+  border: 2px solid green;
   color: white;
   height: 40px;
   border-radius: 0px;
@@ -105,14 +100,15 @@
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
+  border-radius: 10px;
 }
-.addedlbl{
+.addedlbl {
   color: green;
 }
 
 #footer {
   padding: 16px;
-  background: linear-gradient(to bottom, #153cfb, #153cfb);
+  background: linear-gradient(to bottom, green, green);
   color: white;
 }
 
@@ -133,8 +129,8 @@
 }
 
 .paybutton {
-  background: #153cfb;
-  border: 2px solid #153cfb;
+  background: green;
+  border: 2px solid green;
   color: white;
   height: 40px;
   width: 120px;
@@ -149,16 +145,12 @@
   border: 2px solid #f30c0c;
   color: #f30c0c;
   height: 40px;
-  border-radius: 0px;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
-  -o-border-radius: 0px;
+  border-radius: 10px;
 }
 /* login and create user styles */
 
 .home {
-  background-image: url("../Assets/bgpic.jpg");
+  background-image: url("https://storage.pixteller.com/designs/designs-images/2019-03-27/05/simple-background-backgrounds-passion-simple-1-5c9b95c3a34f9.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -175,27 +167,27 @@
   border: none;
 }
 #subBtn {
-  background-color: #153cfb;
+  background-color: green;
   color: #ffffff;
   width: 400px;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
 }
 #createBtn {
   background-color: #ffffff;
-  color: #153cfb;
+  color: green;
   width: 400px;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
 }
 #logBtn {
   background-color: #ffffff;
-  color: #153cfb;
+  color: green;
   width: 400px;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
 }
 
@@ -210,7 +202,7 @@
   padding-bottom: 40px;
   text-align: justify;
   padding-left: 90px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 #box img {
   width: 100px;
@@ -225,162 +217,160 @@ html {
 }
 /* manage admin/user */
 #subBtnAd {
-  background-color: #153cfb;
+  background-color: green;
   color: #ffffff;
   width: 400px;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
 }
 
 #cBtn {
   background-color: #ffffff;
-  color: #153cfb;
+  color: green;
   width: 50%;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
   margin-left: auto;
   margin-right: auto;
 }
-#tbl table{
+#tbl table {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   border: none;
 }
-#delbtn{
-  background-color: #153cfb;
+#delbtn {
+  background-color: green;
   color: #ffffff;
-  border-color: #153cfb;
+  border-color: green;
   margin-bottom: 4px;
   margin-top: 4px;
 }
-#productsub{
-  background-color: #153cfb;
+#productsub {
+  background-color: green;
   color: #ffffff;
   width: 100%;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
 }
-.addproform{
+.addproform {
   width: 100%;
   height: 40px;
   background-color: #d3f1f3;
   border: none;
 }
-#addItem{
+#addItem {
   text-align: justify;
   height: 500px;
   width: 50%;
 }
-#newadminmodal{
+#newadminmodal {
   text-align: justify;
   height: 500px;
   width: 90%;
 }
-#adminupdateitem{
-  background-color: #153cfb;
+#adminupdateitem {
+  background-color: green;
   color: #ffffff;
   width: 100%;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
 }
-#productDiscription{
+#productDiscription {
   height: 100px;
 }
-#productImgURL{
+#productImgURL {
   height: 80px;
 }
-#adminupdatediv{
+#adminupdatediv {
   text-align: justify;
   height: 500px;
   width: 500px;
 }
-#productstorebtn{
+#productstorebtn {
   background-color: #ffffff;
-  color: #153cfb;
+  color: green;
   width: 400px;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
 }
-#storelinkbtn{
+#storelinkbtn {
   background-color: #ffffff;
-  color: #153cfb;
+  color: green;
   width: 100%;
   height: 40px;
-  border-color: #153cfb;
+  border-color: green;
   font-size: large;
 }
 /* contact us */
 
-.contact-background{
+.contact-background {
   background: url("../Assets/contact.jpg") no-repeat center;
   background-size: cover;
   padding: 40px 0;
   text-shadow: 1px 1px 5px #ffffff;
-  
-  }
-  .map{
-    background-color: #80c3d8;
-  }
-  
-  .wp-table th:first-child,
-  .wp-table td:first-child {
+}
+.map {
+  background-color: #80c3d8;
+}
+
+.wp-table th:first-child,
+.wp-table td:first-child {
   padding-left: 100px;
-  }
-  
-  
-  .wp-table td,
-  .wp-table th {
+}
+
+.wp-table td,
+.wp-table th {
   padding: 8px 8px;
   display: table-cell;
   text-align: center;
   vertical-align: top;
-  }
-  
-  .wp-table th {
+}
+
+.wp-table th {
   font-weight: bold;
-  }
-  
-  .wp-table {
-  font-size: 13px!important;
+}
+
+.wp-table {
+  font-size: 13px !important;
   border: 0px solid #ccc;
   border-collapse: collapse;
   border-spacing: 0;
   width: 100%;
   display: table;
-  }
-  
-  .products-section{
+}
+
+.products-section {
   background: url("../Assets/bg.png") no-repeat center;
   background-size: cover;
   padding: 40px 0;
-  }
-  
-  .products-section h1{
+}
+
+.products-section h1 {
   text-align: center;
   color: #ddd;
-  }
-  
-  .border{
+}
+
+.border {
   width: 100px;
   height: 10px;
   background: #34495e;
   margin: 40px auto;
-  }
-  
-  .products-form{
+}
+
+.products-form {
   max-width: 600px;
   margin: auto;
   padding: 0 10px;
   overflow: hidden;
-  }
-  
-  .products-form-text{
+}
+
+.products-form-text {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -391,12 +381,12 @@ html {
   outline: none;
   color: #ddd;
   transition: 0.5s;
-  }
-  .products-form-text:focus{
+}
+.products-form-text:focus {
   box-shadow: 0 0 10px 4px #34495e;
-  }
-  
-  .products-form-btn{
+}
+
+.products-form-btn {
   float: right;
   border: 0;
   background: #34495e;
@@ -405,33 +395,36 @@ html {
   border-radius: 20px;
   cursor: pointer;
   transition: 0.5s;
-  }
+}
 
-  .products-form-btn:hover{
+.products-form-btn:hover {
   background: #2980b9;
-  }
+}
 
-  #userdetails {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  #userdetails td, #userdetails th {
-    border: 1px solid #153cfb;
-    padding: 8px;
-  }
-  
-  #userdetails tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #userdetails tr:hover {background-color: #ddd;}
-  
-  #userdetails th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #153cfb;
-    color: white;
-  }
-  
- 
+#userdetails {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#userdetails td,
+#userdetails th {
+  border: 1px solid green;
+  padding: 8px;
+}
+
+#userdetails tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#userdetails tr:hover {
+  background-color: #ddd;
+}
+
+#userdetails th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: green;
+  color: white;
+}

@@ -1,45 +1,37 @@
 <?php
+// kiểm tra nếu có dữ liệu POST gửi đến form đăng nhập
 if($_POST){
-    include ("config.php");
+    include ("config.php"); // tệp tin kết nối với csdl
 
+    //lay dữ liệu từ form
     $username=$_POST['username'];
     $password=$_POST['password'];
 
-
+    // truy van csdl
     $query="SELECT * FROM users WHERE username='$username' and password='$password'";
 
     $result=mysqli_query($conn,$query);
 
-    if(mysqli_num_rows($result)==1){
+    if(mysqli_num_rows($result)==1){ // neu tim thay 1 hang ket qua
         while($row = mysqli_fetch_assoc($result)) {
             if($row["role"] == "admin"){
 
                 $userID = $row["userID"];
                 $userName = $row["username"];
                 $role = $row["role"];
-                //$avatar = $row["avatarSrc"];
+                
+                //luu thong tin nguoi dung vao bien session
                 session_start();
                 $_SESSION['auth']='true';
                 $_SESSION['userID']=$userID;
                 $_SESSION['userName']=$userName;
                 $_SESSION['role']=$role;
-                //$_SESSION['avatar']=$avatar;
+            
                 header('location:index.php');
-            }else{
-                $userID = $row["userID"];
-                $userName = $row["username"];
-                $role = $row["role"];
-                session_start();
-                $_SESSION['auth']='true';
-                $_SESSION['userID']=$userID;
-                $_SESSION['userName']=$userName;
-                $_SESSION['role']=$role;
-                //$_SESSION['avatar']=$avatar;
-                header('location:index.php');
-            } 
+            }
         }
     }else{
-        echo "<script> alert('Wrong username or password entered!'); </script>";
+        echo "<script> alert('Sai tên đăng nhập hoặc mật khẩu!'); </script>";
     }
 
 }
@@ -55,15 +47,16 @@ if($_POST){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ONE SHOP</title>
-  <link rel="shortcut icon" href=".\Assets\icon.png" />
+  <link rel="shortcut icon" href="https://img.freepik.com/premium-vector/vector-icon-cute-white-cat-with-big-eyes-sitting-circle_176841-6550.jpg?w=2000" />
   <link rel="stylesheet" href="Styles/style.css">
 </head>
 <body class="home">
 
   <center>
     <div id="box">
-      <br><img src=".\Assets\icon.png" /><br><br><br>
-        <form action="#" method="POST">
+      <br><img src="https://img.freepik.com/premium-vector/vector-icon-cute-white-cat-with-big-eyes-sitting-circle_176841-6550.jpg?w=2000" /><br><br><br>
+         <!-- //bieu mau dang nhap -->
+      <form action="#" method="POST">
           <label for="username" style="font-size:20px";>Username:</label><br>
           <input type="text" id="username" name="username" required><br><br>
           <label for="password" style="font-size:20px";>Password:</label><br>

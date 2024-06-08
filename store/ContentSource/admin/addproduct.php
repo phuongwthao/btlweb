@@ -34,7 +34,7 @@ if(!$_SESSION['auth']){
 <div class="container-fluid">
     <div class="row" id="storeHead-admin">
         <div class="col-2 col-sm-2">
-                  <img src="../../Assets/icon.png" alt="Company Logo" style="width: 52px; height: 52px;" class="companyLogo">
+                  <img src="https://img.freepik.com/premium-vector/vector-icon-cute-white-cat-with-big-eyes-sitting-circle_176841-6550.jpg?w=2000" alt="Company Logo" style="width: 52px; height: 52px;" class="companyLogo">
         </div>
         <div class="col-8 col-sm-8">
         <h1 class="headerText"><span><b>Admin - Add product</b></span></h1>

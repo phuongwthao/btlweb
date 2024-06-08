@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONE SHOP</title>
-    <link rel="shortcut icon" href=".\Assets\icon.png" />
+    <link rel="shortcut icon" href="https://img.freepik.com/premium-vector/vector-icon-cute-white-cat-with-big-eyes-sitting-circle_176841-6550.jpg?w=2000" />
     <link rel="stylesheet" href="Styles/style.css">
   </head>
 
@@ -59,7 +59,7 @@
 
 <center>
   	<div id="box">  
-  		<br><img src=".\Assets\icon.png"/><br><br><br>
+  		<br><img src="https://img.freepik.com/premium-vector/vector-icon-cute-white-cat-with-big-eyes-sitting-circle_176841-6550.jpg?w=2000"/><br><br><br>
 	
 		<form action="#" method="POST" enctype="multipart/form-data">
 			<label for="username" style="font-size:18px";>Username:</label><br>
